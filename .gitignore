@@ -1,0 +1,23 @@
+
+
+node_modules/
+
+
+.vscode
+
+
+src/react-app-env.d.ts
+
+
+# story-book
+storybook-static/
+
+# ssh
+config/travis/deploy
+config/travis/deploy.pub
+
+# dist
+dist/
+
+# package.lock.json
+package.lock.json

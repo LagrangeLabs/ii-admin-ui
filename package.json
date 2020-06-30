@@ -1,11 +1,11 @@
 {
   "name": "ii-admin-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "description": "A library of react components, which mainly stores components that can be reused by all business lines of AI-Indeeded Company.",
+  "description": "A library of react components, which is the landing of the design specifications of  AI-Indeeded Company.",
   "author": "ShiMu",
   "license": "MIT",
   "keywords": [

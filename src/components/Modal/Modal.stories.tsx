@@ -6,7 +6,9 @@ import Modal from './Modal';
 const WrappedModal = () => {
   return (
     <div style={{ width: '400px' }}>
-      <Modal />
+      <Modal title="模态框" visible={true}>
+        hello world
+      </Modal>
     </div>
   );
 };

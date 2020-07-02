@@ -3,7 +3,21 @@ import { Modal } from 'antd';
 import classNames from 'classnames';
 import { ModalProps } from 'antd/lib/modal';
 
-const IModal: FC<ModalProps> = (props) => {
+export interface IModalProps extends ModalProps {
+  /** 标题 */
+  title: React.ReactNode | string;
+}
+
+/**
+ * Modal 对话框
+ *
+ * ### 如何引用
+ *
+ * ~~~javascript
+ * import { IModal } from 'ii-admin-ui'
+ * ~~~
+ */
+export const IModal: FC<ModalProps> = (props) => {
   const { title, className, children, ...restProps } = props;
 
   const modalCls = classNames('ii-modal', className);

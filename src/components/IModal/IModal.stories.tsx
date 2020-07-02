@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions'; // 记录组件行为
 
-import Modal from './Modal';
+import IModal from './IModal';
 
 const TestModal = () => {
   const [visible, setVisible] = useState(false);
@@ -14,7 +14,7 @@ const TestModal = () => {
         打开模态框
       </Button>
 
-      <Modal
+      <IModal
         title="模态框"
         cancelText="取消"
         okText="立即添加"
@@ -23,7 +23,7 @@ const TestModal = () => {
         onCancel={() => setVisible(false)}
       >
         模态框内容
-      </Modal>
+      </IModal>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent, wait, RenderResult } from '@testing-library/react';
 import '@testing-library/jest-dom'; // toHaveClass、toBeInTheDocument、...
 import '@testing-library/jest-dom/extend-expect'; // 注册所有的matchers
-import IModal, { IModalProps } from './Modal';
+import IModal, { IModalProps } from './IModal';
 
 let wrapper: RenderResult, modalElement;
 

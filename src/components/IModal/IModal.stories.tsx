@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
+import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions'; // 记录组件行为
+// import { action } from '@storybook/addon-actions'; // 记录组件行为
 
 import IModal from './IModal';
 
@@ -29,5 +30,6 @@ const TestModal = () => {
 };
 
 storiesOf('模态框', module)
+  .addParameters({ info: { propTables: [IModal] } })
   // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
-  .add('Modal', TestModal);
+  .add('IModal', TestModal);

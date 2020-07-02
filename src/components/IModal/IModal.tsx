@@ -9,15 +9,15 @@ export interface IModalProps extends ModalProps {
 }
 
 /**
- * Modal 对话框
+ * ## Modal 对话框
  *
- * ### 如何引用
+ * #### 如何引用
  *
  * ~~~javascript
  * import { IModal } from 'ii-admin-ui'
  * ~~~
  */
-export const IModal: FC<ModalProps> = (props) => {
+export const IModal: FC<IModalProps> = (props) => {
   const { title, className, children, ...restProps } = props;
 
   const modalCls = classNames('ii-modal', className);

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
-import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions'; // 记录组件行为
 
@@ -12,7 +11,7 @@ const TestModal = () => {
   return (
     <div style={{ width: '400px' }}>
       <Button type="primary" onClick={() => setVisible(!visible)}>
-        打开模态框
+        打开对话框
       </Button>
 
       <IModal
@@ -29,7 +28,7 @@ const TestModal = () => {
   );
 };
 
-storiesOf('模态框', module)
-  .addParameters({ info: { propTables: [IModal] } })
+storiesOf('对话框', module)
+  .addParameters({ info: { propTables: [IModal] } }) // 过滤到 Button 等Props
   // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
   .add('IModal', TestModal);

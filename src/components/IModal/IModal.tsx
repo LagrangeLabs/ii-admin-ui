@@ -9,7 +9,9 @@ export interface IModalProps extends ModalProps {
 }
 
 /**
- * ## Modal 对话框
+ * ## IModal 对话框
+ *
+ * IModal 组件的 props 与 Ant Design 的 Modal 组件的 props 基本保持一致。
  *
  * #### 如何引用
  *

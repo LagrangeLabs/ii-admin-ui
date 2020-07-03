@@ -1,0 +1,5 @@
+.propsTable tr > th,
+.propsTable tr > td {
+  padding: 6px 12px;
+  border: 1px solid #999;
+}

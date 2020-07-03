@@ -1,6 +1,7 @@
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import WrapperDecorator from './decorators/WrapperDecorator';
+import PropsTable from './decorators/PropsTable';
 
 import 'antd/dist/antd.less';
 
@@ -13,6 +14,7 @@ addParameters({
     inline: true, // 直接展示所有信息
     header: false, // 隐藏组件名称和组件描述
     source: true,
+    TableComponent: PropsTable, // Props Types 添加样式装饰器
   },
 });
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions'; // 记录组件行为
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
 
 import ITable, { IColumnProps } from './index';
 
@@ -37,11 +39,13 @@ for (let i = 0; i < 46; i++) {
 
 const TestTable = () => {
   return (
-    <div style={{ width: '100%' }}>
-      <ITable columns={columns} dataSource={testData} total={testData.length}>
-        模态框内容
-      </ITable>
-    </div>
+    <ConfigProvider locale={zhCN}>
+      <div style={{ width: '100%' }}>
+        <ITable columns={columns} dataSource={testData} total={testData.length}>
+          模态框内容
+        </ITable>
+      </div>
+    </ConfigProvider>
   );
 };
 

@@ -49,7 +49,16 @@ const TestTable = () => {
   );
 };
 
-storiesOf('表单', module)
-  .addParameters({ info: { propTables: [ITable] } }) // 过滤到 Button 等Props
-  // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
-  .add('ITable', TestTable);
+export default {
+  title: '表格',
+  component: ITable,
+};
+
+export const StoryTable = () => <TestTable />;
+
+StoryTable.story = {
+  name: 'ITable', // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
+  parameters: {
+    info: { propTables: [ITable] },
+  },
+};

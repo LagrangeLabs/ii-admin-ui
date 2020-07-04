@@ -10,17 +10,6 @@ export interface IITableProps<T> extends TableProps<T> {
 
 export interface IIColumnProps<T> extends ColumnProps<T> {}
 
-/**
- * ## ITable 表格
- *
- * ITable 组件的 props 与 Ant Design 的 Table 组件的 props 基本保持一致。
- *
- * #### 如何引用
- *
- * ~~~javascript
- * import { ITable } from 'ii-admin-ui'
- * ~~~
- */
 export const ITable = <T extends object = any>(props: IITableProps<T>) => {
   const { className, bordered, total, pagination, ...restProps } = props;
   let paginationCfg: TablePaginationConfig | false;

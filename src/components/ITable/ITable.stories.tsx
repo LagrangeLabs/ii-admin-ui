@@ -1,9 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions'; // 记录组件行为
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
-
 import ITable, { IColumnProps } from './index';
 
 interface TestDataItem {
@@ -54,11 +51,25 @@ export default {
   component: ITable,
 };
 
-export const StoryTable = () => <TestTable />;
+export const StoryTable = () => (
+  <div>
+    <h1>ITable 组件</h1>
+    <p>ITable 组件的 props 与 Ant Design 的 Table 组件的 props 基本保持一致。</p>
+    <h2>如何引用</h2>
+    <div style={{ marginBottom: '10px' }}>
+      <code>{`import {ITable} from 'ii-admin-ui'`}</code>
+    </div>
+    <br />
+    <h2>组件展示</h2>
+    <TestTable />
+  </div>
+);
 
 StoryTable.story = {
   name: 'ITable', // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
   parameters: {
-    info: { propTables: [ITable] },
+    info: {
+      propTables: [ITable],
+    },
   },
 };

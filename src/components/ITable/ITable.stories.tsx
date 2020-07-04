@@ -38,9 +38,7 @@ const TestTable = () => {
   return (
     <ConfigProvider locale={zhCN}>
       <div style={{ width: '100%' }}>
-        <ITable columns={columns} dataSource={testData} total={testData.length}>
-          模态框内容
-        </ITable>
+        <ITable columns={columns} dataSource={testData} total={testData.length} />
       </div>
     </ConfigProvider>
   );
@@ -54,10 +52,13 @@ export default {
 export const StoryTable = () => (
   <div>
     <h1>ITable 组件</h1>
-    <p>ITable 组件的 props 与 Ant Design 的 Table 组件的 props 基本保持一致。</p>
+    <p>
+      ITable 组件的 props 与 Ant Design 的 Table 组件的 props
+      基本保持一致。在引用该组件时，会默认进行分页选项等相关参数配置。
+    </p>
     <h2>如何引用</h2>
     <div style={{ marginBottom: '10px' }}>
-      <code>{`import {ITable} from 'ii-admin-ui'`}</code>
+      <code>{`import { ITable } from 'ii-admin-ui'`}</code>
     </div>
     <br />
     <h2>组件展示</h2>

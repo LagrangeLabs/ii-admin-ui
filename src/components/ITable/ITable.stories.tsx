@@ -51,7 +51,7 @@ export default {
 
 export const StoryTable = () => (
   <div>
-    <h1>ITable 组件</h1>
+    <h1>ITable 表格</h1>
     <p>
       ITable 组件的 props 与 Ant Design 的 Table 组件的 props
       基本保持一致。在引用该组件时，会默认进行分页选项等相关参数配置。

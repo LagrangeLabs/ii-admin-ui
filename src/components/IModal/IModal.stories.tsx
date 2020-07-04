@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
-import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions'; // 记录组件行为
-
 import IModal from './IModal';
 
 const TestModal = () => {
@@ -28,7 +25,30 @@ const TestModal = () => {
   );
 };
 
-storiesOf('对话框', module)
-  .addParameters({ info: { propTables: [IModal] } }) // 过滤到 Button 等Props
-  // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
-  .add('IModal', TestModal);
+export default {
+  title: '对话框',
+  component: IModal,
+};
+
+export const StoryModal = () => (
+  <div>
+    <h1>IModal 对话框</h1>
+    <p>IModal 组件的 props 与 Ant Design 的 Modal 组件的 props 基本保持一致。</p>
+    <h2>如何引用</h2>
+    <div style={{ marginBottom: '10px' }}>
+      <code>{`import { IModal } from 'ii-admin-ui'`}</code>
+    </div>
+    <br />
+    <h2>组件展示</h2>
+    <TestModal />
+  </div>
+);
+
+StoryModal.story = {
+  name: 'IModal', // 如果要自动显示组件的注释，需将当前 Story 的名称改成和组件名称一样
+  parameters: {
+    info: {
+      propTables: [IModal],
+    },
+  },
+};

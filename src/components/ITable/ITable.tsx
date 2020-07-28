@@ -33,7 +33,7 @@ export const ITable = <T extends object = any>(props: IITableProps<T>) => {
   // 用户可能将 total 值放置在 pagination 中
   if (total || pagination) {
     if (pagination) {
-      paginationCfg = { ...pagination, ...defaultPagination };
+      paginationCfg = { ...defaultPagination, ...pagination };
     } else {
       paginationCfg = defaultPagination;
     }

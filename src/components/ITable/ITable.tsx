@@ -41,7 +41,15 @@ export const ITable = <T extends object = any>(props: IITableProps<T>) => {
     paginationCfg = false;
   }
 
-  return <Table data-testid="test-table" bordered className={tableCls} {...restProps} pagination={paginationCfg} />;
+  return (
+    <Table
+      data-testid="test-table"
+      bordered={bordered}
+      className={tableCls}
+      {...restProps}
+      pagination={paginationCfg}
+    />
+  );
 };
 
 ITable.defaultProps = {

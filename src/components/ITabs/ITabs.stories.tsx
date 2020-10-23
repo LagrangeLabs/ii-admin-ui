@@ -36,6 +36,7 @@ export const StoryTabs = () => (
     <h2>如何引用</h2>
     <div style={{ marginBottom: '10px' }}>
       <code>{`import { ITabs } from 'ii-admin-ui'`}</code>
+      <br />
       <code>{`const { ITabPane } = ITabs`}</code>
     </div>
     <br />

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import '@testing-library/jest-dom'; // toHaveClass、toBeInTheDocument、...
 import '@testing-library/jest-dom/extend-expect'; // 注册所有的matchers
-import ITab, { ITabsProps } from './index';
+import ITab from './index';
 
 const { ITabPane } = ITab;
 

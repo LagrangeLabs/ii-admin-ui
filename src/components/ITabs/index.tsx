@@ -1,8 +1,25 @@
-import ITabs, { ITabsProps as IITabsProps, ITabPaneProps as IITabPaneProps, ITabPane } from './ITabs';
+import React from 'react';
+import classNames from 'classnames';
+import { Tabs } from 'antd';
+import { TabsProps, TabPaneProps } from 'antd/lib/tabs';
 
-export type ITabsProps = IITabsProps;
-export type ITabPaneProps = IITabPaneProps;
+const { TabPane } = Tabs;
 
-ITabs.ITabPane = ITabPane;
+export type ITabsProps = TabsProps;
+export type ITabPaneProps = TabPaneProps;
+
+function ITabs(props: ITabsProps) {
+  const { className, children, ...restProps } = props;
+
+  const tabCls = classNames('ii-tabs', className);
+
+  return (
+    <Tabs data-testid="test-tabs" className={tabCls} {...restProps}>
+      {children}
+    </Tabs>
+  );
+}
+
+ITabs.ITabPane = TabPane;
 
 export default ITabs;

@@ -19,7 +19,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "docs/index.md",
-          "updatedTime": 1605064908863,
+          "updatedTime": 1605078989000,
           "title": "中后台基础组件库",
           "order": 10,
           "hero": {
@@ -64,7 +64,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "docs/components/IModal.md",
-          "updatedTime": 1605078994068,
+          "updatedTime": 1605078989000,
           "title": "IModal组件",
           "slugs": [
             {
@@ -94,7 +94,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "docs/components/index.md",
-          "updatedTime": 1605012823960,
+          "updatedTime": 1605078989000,
           "title": "组件总览",
           "order": 1,
           "nav": {
@@ -121,7 +121,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "docs/components/ITable.md",
-          "updatedTime": 1605078994139,
+          "updatedTime": 1605078989000,
           "title": "ITable组件",
           "slugs": [
             {
@@ -151,7 +151,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "docs/components/ITabs.md",
-          "updatedTime": 1605078994157,
+          "updatedTime": 1605078989000,
           "title": "ITabs组件",
           "slugs": [
             {

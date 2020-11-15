@@ -8,7 +8,6 @@ ii-admin-ui 组件库是在 React 框架基础上对 Antd Design 进行的二次
 
 ```JavaScript
 import { IModal } from 'ii-admin-ui'
-import 'ii-admin-ui/dist/index.css'
 import 'antd/dist/antd.css'
 ```
 

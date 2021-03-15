@@ -4,3 +4,4 @@
 export { default as IModal } from './components/IModal';
 export { default as ITable } from './components/ITable';
 export { default as ITabs } from './components/ITabs';
+export { default as ICards } from './components/ICards';

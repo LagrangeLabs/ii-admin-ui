@@ -6,7 +6,12 @@ export default {
     },
     {
       title: '展示组件',
-      children: ['components/IModal', 'components/ITabs', 'components/ITable'],
+      children: [
+        'components/ICards',
+        'components/IModal',
+        'components/ITabs',
+        'components/ITable',
+      ],
     },
     // {
     //   title: '数据录入组件',

@@ -1,0 +1,32 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-item {
+  min-width: auto;
+  background: #E5F7EC;
+  width: calc((100% - 40px) / 3);
+}
+.card-item + .card-item{
+  margin-left: 20px;
+}
+.gray-bg {
+  background: #eee;
+}
+.card-icon {
+  color: #1AB857;
+  background: rgba(26, 184, 87, 0.15);
+}
+.card-value {
+  color: #1AB857;
+}
+.red-color {
+  background: linear-gradient(94deg, #FFB657 0%, #FF7B24 100%);
+}
+.card-red-label, .card-red-value {
+  color: #fff;
+}
+.card-red-icon {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}

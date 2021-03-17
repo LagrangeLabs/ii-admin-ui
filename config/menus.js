@@ -10,6 +10,7 @@ export default {
         'components/ICards',
         'components/ILabel',
         'components/IModal',
+        'components/IPopconfirm',
         'components/ITabs',
         'components/ITable',
       ],

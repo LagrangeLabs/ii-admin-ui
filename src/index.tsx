@@ -6,3 +6,4 @@ export { default as ITable } from './components/ITable';
 export { default as ITabs } from './components/ITabs';
 export { default as ICards } from './components/ICards';
 export { default as ILabel } from './components/ILabel';
+export { default as IPopconfirm } from './components/IPopconfirm';

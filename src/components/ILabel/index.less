@@ -1,0 +1,104 @@
+@success: #00b145;
+@successBg: fade(#00b145, 10%);
+@processing: #488dff;
+@processingBg: fade(#488dff, 10%);
+@disable: #8597a8;
+@disableBg: fade(#8597a8, 10%);
+@error: #ff574b;
+@errorBg: fade(#ff574b, 10%);
+@warning: #f7b500;
+@warningBg: fade(#f7b500, 10%);
+
+.ii-ui-label {
+  display: inline-block;
+  height: 19px;
+  line-height: 19px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0 3px;
+  &-default {
+    color: #ffffff;
+    &-success {
+      background: @success;
+    }
+    &-processing {
+      background: @processing;
+    }
+    &-disable {
+      background: @disable;
+    }
+    &-error {
+      background: @error;
+    }
+    &-warning {
+      background: @warning;
+    }
+  }
+  &-dot {
+    padding-left: 13px;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: 3px;
+      top: 6px;
+      content: ' ';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    &-success {
+      color: @success;
+      &::before {
+        background: @success;
+      }
+    }
+    &-processing {
+      color: @processing;
+      &::before {
+        background: @processing;
+      }
+    }
+    &-disable {
+      color: @disable;
+      &::before {
+        background: @disable;
+      }
+    }
+    &-error {
+      color: @error;
+      &::before {
+        background: @error;
+      }
+    }
+    &-warning {
+      color: @warning;
+      &::before {
+        background: @warning;
+      }
+    }
+  }
+
+  &-ghost {
+    &-success {
+      color: @success;
+      background: @successBg;
+    }
+    &-processing {
+      color: @processing;
+      background: @processingBg;
+    }
+    &-disable {
+      color: @disable;
+      background: @disableBg;
+    }
+    &-error {
+      color: @error;
+      background: @errorBg;
+    }
+    &-warning {
+      color: @warning;
+      background: @warningBg;
+    }
+  }
+}

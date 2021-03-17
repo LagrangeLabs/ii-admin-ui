@@ -40,7 +40,7 @@ function ICards(props: CardProps) {
   const tabCls = classNames('ii-ui-card', className);
   const labelCls = classNames(
     'ii-ui-card-label',
-    { 'mt-4': reverse, 'mb-4': reverse },
+    { 'mt-4': reverse, 'mb-4': !reverse },
     labelClass,
   );
   const valueCls = classNames('ii-ui-card-value', valueClass);

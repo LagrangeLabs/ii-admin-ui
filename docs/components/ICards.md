@@ -38,6 +38,7 @@ export default () => {
         reverse={false}
       ></ICards>
       <ICards
+        reverse
         className="card-item red-color"
         label="累计用户"
         labelClass="card-red-label"
@@ -45,7 +46,6 @@ export default () => {
         value="4000"
         icon={<RobotOutlined style={{ fontSize: 32 }} />}
         iconClass="card-red-icon"
-        reverse={false}
       ></ICards>
     </div>
   );

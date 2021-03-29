@@ -8,9 +8,13 @@ ii-admin-ui 组件库是在 React 框架基础上对 Antd Design 进行的二次
 
 ```JavaScript
 import { IModal } from 'ii-admin-ui'
-import 'antd/dist/antd.css'
 ```
 
 **注：**
 
 - [开发文档](https://github.com/LagrangeLabs/ii-admin-ui/blob/master/docs/develop.md)
+
+### 发布日志
+
+请参考 conventional-changelog-cli 包说明
+https://www.npmjs.com/package/conventional-changelog-cli

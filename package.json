@@ -41,6 +41,7 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "prepublishOnly": "npm run build"
   },
   "eslintConfig": {

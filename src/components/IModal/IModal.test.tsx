@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent, wait, RenderResult } from '@testing-library/react';
 import '@testing-library/jest-dom'; // toHaveClass、toBeInTheDocument、...
 import '@testing-library/jest-dom/extend-expect'; // 注册所有的matchers
-import IModal, { IModalProps } from './IModal';
+import IModal, { IModalProps } from './index';
 
 let wrapper: RenderResult, modalElement;
 
@@ -13,7 +13,8 @@ describe("Test Modal component on the props of antd's input component", () => {
    * 在每个case运行之前，都会运行该函数
    */
   beforeEach(() => {
-    wrapper = render(<IModal title="模态框" visible={true} />);
+    // wrapper = render(<IModal title="模态框" visible></IModal>);
+    wrapper = render(<IModal title="模态框" visible></IModal>);
   });
 
   it('should have modal classnames', () => {

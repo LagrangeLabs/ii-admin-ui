@@ -38,7 +38,7 @@ for (let i = 0; i < 46; i++) {
 // 解决报 "matchMedia" 错误
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
@@ -55,7 +55,13 @@ let wrapper: RenderResult, tableElement: HTMLElement;
 // 测试 Ant Design 的原始 Table 组件是否正常
 describe("Test Table component on the props of antd's table component", () => {
   beforeEach(() => {
-    wrapper = render(<ITable columns={columns} dataSource={testData} total={testData.length} />);
+    wrapper = render(
+      <ITable
+        columns={columns}
+        dataSource={testData}
+        total={testData.length}
+      />,
+    );
     tableElement = wrapper.getByTestId('test-table');
   });
 

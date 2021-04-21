@@ -1,0 +1,123 @@
+.ii-table {
+  position: relative;
+
+  .ant-table {
+    font-size: @ii-font-size-base;
+    color: @ii-text-color;
+
+    .ant-table-thead > tr > th {
+      background: @ii-table-header-bg;
+      color: @ii-table-header-color;
+      padding: @ii-table-padding-vertical-md @ii-table-padding-horizontal;
+      font-weight: @ii-table-header-weight;
+    }
+
+    .ant-table-tbody > tr > td,
+    .ant-table tfoot > tr > th,
+    .ant-table tfoot > tr > td {
+      padding: @ii-table-padding-vertical @ii-table-padding-horizontal;
+    }
+
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-content
+      > table
+      > thead
+      > tr
+      > th,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-header
+      > table
+      > thead
+      > tr
+      > th,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-body
+      > table
+      > thead
+      > tr
+      > th,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-content
+      > table
+      > tbody
+      > tr
+      > td,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-header
+      > table
+      > tbody
+      > tr
+      > td,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-body
+      > table
+      > tbody
+      > tr
+      > td,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-content
+      > table
+      > tfoot
+      > tr
+      > th,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-header
+      > table
+      > tfoot
+      > tr
+      > th,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-body
+      > table
+      > tfoot
+      > tr
+      > th,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-content
+      > table
+      > tfoot
+      > tr
+      > td,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-header
+      > table
+      > tfoot
+      > tr
+      > td,
+    &.ant-table-bordered
+      > .ant-table-container
+      > .ant-table-body
+      > table
+      > tfoot
+      > tr
+      > td {
+      border-color: @ii-table-border-color;
+    }
+
+    &.ant-table-bordered > .ant-table-container {
+      border-color: @ii-table-border-color;
+    }
+  }
+
+  .ant-pagination {
+    .ant-pagination-total-text {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &-total {
+    color: @ii-primary-color;
+  }
+}

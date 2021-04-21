@@ -1,9 +1,9 @@
 /**
  * 将所有组件都导入，再导出。这样就可以从入口文件直接导入所有组件
  */
-export { default as IModal } from './components/IModal';
-export { default as ITable } from './components/ITable';
-export { default as ITabs } from './components/ITabs';
-export { default as ICards } from './components/ICards';
-export { default as ILabel } from './components/ILabel';
-export { default as IPopconfirm } from './components/IPopconfirm';
+export { default as IModal } from './components/i-modal';
+export { default as ITable } from './components/i-table';
+export { default as ITabs } from './components/i-tabs';
+export { default as ICards } from './components/i-cards';
+export { default as ILabel } from './components/i-label';
+export { default as IPopconfirm } from './components/i-popconfirm';

@@ -8,7 +8,7 @@ export interface IModalProps extends ModalProps {
   title?: React.ReactNode | string;
 }
 
-export const IModal: FC<IModalProps> = (props) => {
+export const IModal: FC<IModalProps> = props => {
   const { title, className, children, ...restProps } = props;
 
   const modalCls = classNames('ii-modal', className);

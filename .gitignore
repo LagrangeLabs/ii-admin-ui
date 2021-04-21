@@ -17,6 +17,8 @@ ci_rsa
 ci_rsa.pub
 # production
 /dist
+/es
+/lib
 /docs-dist
 
 # misc

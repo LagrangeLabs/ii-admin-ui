@@ -20,7 +20,7 @@ describe("Test Tabs component on the props of antd's input component", () => {
         <ITabPane tab="test" key="test">
           hello
         </ITabPane>
-      </ITab>
+      </ITab>,
     );
   });
 

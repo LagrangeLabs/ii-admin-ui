@@ -13,6 +13,7 @@ export default {
         'components/IPopconfirm',
         'components/ITabs',
         'components/ITable',
+        'components/IAlert',
       ],
     },
     // {

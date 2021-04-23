@@ -1,12 +1,14 @@
 import React, { FC, ReactNode, useEffect } from 'react';
 import { Alert } from 'antd';
 import { AlertProps } from 'antd/es/alert';
+import createIIcon from '../i-icon';
 import './index.less';
 
-// todo without iconfont
+const IIcon = createIIcon('//at.alicdn.com/t/font_2221989_8ljdyf81eqj.js');
+// todo 目前只有success的图标
 const customIcons = {
   info: '',
-  success: '',
+  success: <IIcon type="icon-chenggong" />,
   warning: '',
   error: '',
 } as Record<NonNullable<AlertProps['type']>, ReactNode>;
@@ -43,10 +45,12 @@ const IAlert: FC<AlertProps> = props => {
     <Alert
       className={`ii-alert ii-alert--${type}`}
       type={type}
-      // todo without iconfont
+      showIcon={showIcon}
       icon={icon || (showIcon ? customIcons[type] : void 0)}
-      // todo without iconfont
-      closeText={closeText || (closable ? '' : void 0)}
+      closable={closable}
+      closeText={
+        closeText || (closable ? <IIcon type="icon-guanbi" /> : void 0)
+      }
       {...restProps}
     />
   );

@@ -3,7 +3,7 @@ import { Alert } from 'antd';
 import { AlertProps } from 'antd/es/alert';
 import './index.less';
 
-// todo
+// todo without iconfont
 const customIcons = {
   info: '',
   success: '',
@@ -43,9 +43,9 @@ const IAlert: FC<AlertProps> = props => {
     <Alert
       className={`ii-alert ii-alert--${type}`}
       type={type}
-      // todo
+      // todo without iconfont
       icon={icon || (showIcon ? customIcons[type] : void 0)}
-      // todo
+      // todo without iconfont
       closeText={closeText || (closable ? '' : void 0)}
       {...restProps}
     />

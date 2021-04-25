@@ -21,6 +21,7 @@ const IAlert: FC<AlertProps> = props => {
     icon,
     closable,
     closeText,
+    // ? unstable prefix的变量暂时不支持传入
     action: unstable_action,
     banner: unstable_banner,
     description: unstable_description,
@@ -29,19 +30,26 @@ const IAlert: FC<AlertProps> = props => {
   // effect
   useEffect(() => {
     let warnTxt = '';
+    const createWarnTxt = (txt: string) => {
+      if (!warnTxt) {
+        warnTxt = txt;
+        return;
+      }
+      warnTxt += '\n' + txt;
+    };
     if (unstable_action) {
-      warnTxt += 'action暂时不支持';
+      createWarnTxt('action暂时不支持');
     }
     if (unstable_banner) {
-      warnTxt += '\nbanner暂不支持';
+      createWarnTxt('banner暂不支持');
     }
     if (unstable_description) {
-      warnTxt += '\ndescription暂时不支持';
+      createWarnTxt('description暂时不支持');
     }
     console.warn(warnTxt);
   }, []);
   // jsx element
-  const jsxEle = (
+  return (
     <Alert
       className={`ii-alert ii-alert--${type}`}
       type={type}
@@ -54,7 +62,6 @@ const IAlert: FC<AlertProps> = props => {
       {...restProps}
     />
   );
-  return jsxEle;
 };
 
 export default IAlert;

@@ -6,4 +6,5 @@ export { default as ITable } from './components/i-table';
 export { default as ITabs } from './components/i-tabs';
 export { default as ICards } from './components/i-cards';
 export { default as ILabel } from './components/i-label';
+export { default as IEmpty } from './components/i-empty';
 export { default as IPopconfirm } from './components/i-popconfirm';

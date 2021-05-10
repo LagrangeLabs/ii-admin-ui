@@ -14,6 +14,7 @@ export default {
         'components/ITabs',
         'components/ITable',
         'components/IAlert',
+        'components/ISmallCard',
       ],
     },
     // {

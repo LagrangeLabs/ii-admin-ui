@@ -9,3 +9,4 @@ export { default as ILabel } from './components/i-label';
 export { default as IPopconfirm } from './components/i-popconfirm';
 export { default as IAlert } from './components/i-alert';
 export { default as createIIcon } from './components/i-icon';
+export { default as ISmallCard } from './components/i-smallcard';

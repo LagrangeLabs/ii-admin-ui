@@ -1,10 +1,5 @@
-@ii-success-color: #2dd17c;
-@ii-info-color: #0085ff;
-@ii-warning-color: #ff9d00;
-@ii-error-color: #ff493d;
-// ? 暂时只有一个尺寸
-@ii-font-size-base: 13px;
-@ii-font-size-icon: 15px;
+@import '../i-style/color/index.less';
+@import '../i-style/themes/index.less';
 
 .ii-alert {
   border: none;
@@ -12,7 +7,7 @@
   .ant-alert-icon {
     display: flex;
     align-items: center;
-    font-size: @ii-font-size-icon;
+    font-size: 15px;
   }
   .ant-alert-no-icon {
     padding: 7px 16px;

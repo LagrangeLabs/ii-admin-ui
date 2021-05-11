@@ -15,41 +15,48 @@ import './index.less';
 
 export interface IEmptyProps extends EmptyProps {
   /** 空状态类型 */
-  type?: 'data' | 'dataLose' | 'file' | 'form' | 'mail' | 'order' | 'source';
+  type?:
+    | 'lose-data1'
+    | 'lose-data2'
+    | 'no-file'
+    | 'no-form'
+    | 'no-mail'
+    | 'no-order'
+    | 'no-doc';
   /** 自定义描述内容 */
   description?: React.ReactNode;
   /** 设置显示图片，为 string 时表示自定义图片地址。	ReactNode	Empty.PRESENTED_IMAGE_DEFAULT */
   image?: React.ReactNode;
-  /** 图片样式 { width: 220, height: 220 } */
+  /** 图片样式， 默认值为{ width: 220, height: 220 } */
   imageStyle: React.CSSProperties;
 }
 
 const TYPE = {
-  data: {
+  'lose-data1': {
     description: '数据丢失',
     image: NoDataPng,
   },
-  dataLose: {
+  'lose-data2': {
     description: '数据丢失',
     image: DataLosePng,
   },
-  file: {
+  'no-file': {
     description: '暂无文件',
     image: NoFilePng,
   },
-  form: {
+  'no-form': {
     description: '暂无表单',
     image: NoFormPng,
   },
-  mail: {
+  'no-mail': {
     description: '暂无邮件',
     image: NoMailPng,
   },
-  order: {
+  'no-order': {
     description: '暂无订单',
     image: NoOrderPng,
   },
-  source: {
+  'no-doc': {
     description: '暂无资料',
     image: NoSourcePng,
   },

@@ -1,6 +1,5 @@
 import React, { FC, ReactNode, useEffect } from 'react';
-import { Alert } from 'antd';
-import { AlertProps } from 'antd/es/alert';
+import { Alert, AlertProps } from 'antd';
 import createIIcon from '../i-icon';
 import './index.less';
 
@@ -10,7 +9,7 @@ const customIcons = {
   info: '',
   success: <IIcon type="icon-chenggong" />,
   warning: '',
-  error: '',
+  error: <IIcon type="icon-shibai" />,
 } as Record<NonNullable<AlertProps['type']>, ReactNode>;
 
 const IAlert: FC<AlertProps> = props => {
@@ -65,3 +64,5 @@ const IAlert: FC<AlertProps> = props => {
 };
 
 export default IAlert;
+
+export type IAlertProps = AlertProps;

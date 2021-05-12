@@ -16,10 +16,4 @@ export default defineConfig({
   menus,
   styles: ['https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.css'],
   // more config: https://d.umijs.org/config
-  theme: {
-    'font-size-base': '13px',
-    'text-color': '#334455',
-    'border-color-base': '#D9E0E8',
-    'border-radius-base': '5px',
-  },
 });

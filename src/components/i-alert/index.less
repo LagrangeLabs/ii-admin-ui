@@ -1,0 +1,50 @@
+@ii-success-color: #2dd17c;
+@ii-info-color: #0085ff;
+@ii-warning-color: #ff9d00;
+@ii-error-color: #ff493d;
+// ? 暂时只有一个尺寸
+@ii-font-size-base: 13px;
+@ii-font-size-icon: 15px;
+
+.ii-alert {
+  border: none;
+  border-radius: 4px;
+  .ant-alert-icon {
+    display: flex;
+    align-items: center;
+    font-size: @ii-font-size-icon;
+  }
+  .ant-alert-no-icon {
+    padding: 7px 16px;
+  }
+  .ant-alert-message {
+    font-size: @ii-font-size-base;
+  }
+}
+.ii-alert--success {
+  background-color: rgba(47, 195, 124, 0.1);
+  .ant-alert-message {
+    color: @ii-success-color;
+  }
+}
+
+.ii-alert--info {
+  background-color: rgba(0, 133, 255, 0.1);
+  .ant-alert-message {
+    color: @ii-info-color;
+  }
+}
+
+.ii-alert--warning {
+  background-color: rgba(255, 157, 0, 0.1);
+  .ant-alert-message {
+    color: @ii-warning-color;
+  }
+}
+
+.ii-alert--error {
+  background-color: rgba(255, 73, 61, 0.1);
+  .ant-alert-message {
+    color: @ii-error-color;
+  }
+}

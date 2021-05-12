@@ -1,0 +1,35 @@
+.smallcard-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ii-ui-smallcard {
+  min-width: auto;
+  background: #e5f7ec;
+  width: calc((100% - 40px) / 3);
+}
+.ii-ui-smallcard + .ii-ui-smallcard {
+  margin-left: 20px;
+}
+.smallcard-title {
+  color: rgb(70, 52, 231);
+}
+.mallcard-icon {
+  color: #a5e3f0;
+  font-size: 14px;
+}
+.green-bg {
+  background: rgba(147, 229, 147, 0.3);
+}
+.red-bg {
+  background: rgba(224, 116, 116, 0.2);
+}
+.smallcard-icon {
+  color: #1ab857;
+  background: rgba(26, 184, 87, 0.15);
+}
+.smallcard-value {
+  color: #1ab857;
+}
+.smallcard-unit {
+  color: blue;
+}

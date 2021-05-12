@@ -8,6 +8,7 @@ export default {
       title: '展示组件',
       children: [
         'components/ICards',
+        'components/IEmpty',
         'components/ILabel',
         'components/IModal',
         'components/IPopconfirm',

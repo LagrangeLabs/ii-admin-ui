@@ -2,15 +2,14 @@
 @primary-color-8: rgba(0, 133, 255, 0.8);
 @primary-color-2: rgba(0, 133, 255, 0.2);
 @white: #ffffff;
-
+@border-radius: 4px;
 @color: #5c6f88;
 
 .ii-button {
   padding: 0 19px;
   height: 36px;
   font-size: 13px;
-  font-family: PingFangSC, PingFangSC-Regular;
-  border-radius: 4px;
+  border-radius: @border-radius;
   text-shadow: none;
   box-shadow: none;
   .ant-btn-primary {
@@ -19,12 +18,12 @@
   .ant-btn-primary:hover {
     background: @primary-color-8;
   }
-  .anticon {
-    font-size: 16px;
-  }
-  .anticon + span {
-    margin-left: 4px;
-  }
+}
+.anticon {
+  font-size: 16px;
+}
+.anticon + span {
+  margin-left: 4px;
 }
 .ii-button:focus:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link),
 .ii-button:not(.ant-btn-primary):not([disabled]):hover {

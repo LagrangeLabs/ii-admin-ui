@@ -2,55 +2,49 @@ import React, { FC, useEffect, useState } from 'react';
 import { Button } from 'antd';
 import classNames from 'classnames';
 import { ButtonProps } from 'antd/lib/button';
-import { PlusOutlined } from '@ant-design/icons';
-import { VerticalAlignBottomOutlined } from '@ant-design/icons';
-import { EditOutlined } from '@ant-design/icons';
-import { UploadOutlined } from '@ant-design/icons';
 
 import './style/index.less';
 
-export interface IButtonProps extends ButtonProps {
+export interface IButtonProps extends Omit<ButtonProps, 'size'> {
   /** 设置按钮的样式名 */
   className?: string;
-  /** 设置按钮的应用场景类型 */
-  kind?: 'download' | 'add' | 'export' | 'edit' | 'upload';
   /** 设置按钮的大小 */
-  sizeValue?: '1' | '2' | '3' | '4' | '5' | '6' | '7';
+  size?: 'xl' | 'default' | 'lg' | 'md' | 'sm' | 'xs' | 'xss';
 }
 
 export const IButton: FC<IButtonProps> = props => {
-  const { sizeValue, kind, className, children, ...restProps } = props;
-  const [paddingValue, setPaddingValue] = useState('20px');
-  const [heightValue, setHeightValue] = useState('36px');
+  const { size, className, children, ...restProps } = props;
+  const [paddingValue, setPaddingValue] = useState<string>('20px');
+  const [heightValue, setHeightValue] = useState<string>('36px');
 
   const buttonCls = classNames('ii-button', className);
 
   useEffect(() => {
-    switch (sizeValue) {
-      case '1':
+    switch (size) {
+      case 'xl':
         setPaddingValue('20px');
         setHeightValue('40px');
         break;
-      case '2':
+      case 'default':
         setPaddingValue('20px');
         break;
-      case '3':
+      case 'lg':
         setPaddingValue('15px');
         setHeightValue('32px');
         break;
-      case '4':
+      case 'md':
         setPaddingValue('14px');
         setHeightValue('30px');
         break;
-      case '5':
+      case 'sm':
         setPaddingValue('14px');
         setHeightValue('28px');
         break;
-      case '6':
+      case 'xs':
         setPaddingValue('9px');
         setHeightValue('26px');
         break;
-      case '7':
+      case 'xss':
         setPaddingValue('9px');
         setHeightValue('24px');
         break;
@@ -67,11 +61,6 @@ export const IButton: FC<IButtonProps> = props => {
       style={{ height: `${heightValue}`, padding: `0 ${paddingValue}` }}
       {...restProps}
     >
-      {kind === 'add' && <PlusOutlined />}
-      {kind === 'download' && <VerticalAlignBottomOutlined />}
-      {kind === 'upload' && <UploadOutlined />}
-      {kind === 'export' && <UploadOutlined />}
-      {kind === 'edit' && <EditOutlined />}
       {children}
     </Button>
   );

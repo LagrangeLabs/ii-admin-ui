@@ -11,8 +11,12 @@ Demo:
 ```tsx
 import React from 'react';
 import { IButton } from 'ii-admin-ui';
-import { PlusOutlined } from '@ant-design/icons';
-import { LoadingOutlined } from '@ant-design/icons';
+import {
+  PlusOutlined,
+  VerticalAlignBottomOutlined,
+  EditOutlined,
+  UploadOutlined,
+} from '@ant-design/icons';
 
 import './IButton.css';
 
@@ -20,7 +24,9 @@ export default () => {
   return (
     <>
       <div className="main-row1">
-        <IButton type="primary">提交表单</IButton>
+        <IButton type="primary" size="small">
+          提交表单
+        </IButton>
         <IButton type="primary">
           <PlusOutlined />
           添加时间
@@ -39,7 +45,7 @@ export default () => {
       <div className="main-row2">
         <div>
           <div className="main-item">
-            <IButton type="primary" sizeValue="1">
+            <IButton type="primary" size="xl">
               提交表单
             </IButton>
           </div>
@@ -47,7 +53,7 @@ export default () => {
         </div>
         <div>
           <div className="main-item">
-            <IButton type="primary" sizeValue="2">
+            <IButton type="primary" size="default">
               提交表单
             </IButton>
           </div>
@@ -55,7 +61,7 @@ export default () => {
         </div>
         <div>
           <div className="main-item">
-            <IButton type="primary" sizeValue="3">
+            <IButton type="primary" size="lg">
               提交表单
             </IButton>
           </div>
@@ -63,25 +69,25 @@ export default () => {
         </div>
         <div>
           <div className="main-item">
-            <IButton sizeValue="4">提交表单</IButton>
+            <IButton size="md">提交表单</IButton>
           </div>
           <p>高度：30px</p>
         </div>
         <div>
           <div className="main-item">
-            <IButton sizeValue="5">提交表单</IButton>
+            <IButton size="sm">提交表单</IButton>
           </div>
           <p>高度：28px</p>
         </div>
         <div>
           <div className="main-item">
-            <IButton sizeValue="6">提交表单</IButton>
+            <IButton size="xs">提交表单</IButton>
           </div>
           <p>高度：26px</p>
         </div>
         <div>
           <div className="main-item">
-            <IButton sizeValue="7">提交表单</IButton>
+            <IButton size="xss">提交表单</IButton>
           </div>
           <p>高度：24px</p>
         </div>
@@ -98,9 +104,12 @@ Demo:
 ```tsx
 import React from 'react';
 import { IButton } from 'ii-admin-ui';
-import { PlusOutlined } from '@ant-design/icons';
-import { VerticalAlignBottomOutlined } from '@ant-design/icons';
-import { EditOutlined } from '@ant-design/icons';
+import {
+  PlusOutlined,
+  VerticalAlignBottomOutlined,
+  EditOutlined,
+  UploadOutlined,
+} from '@ant-design/icons';
 
 import './IButton.css';
 
@@ -110,16 +119,25 @@ export default () => {
       <div className="minor-row">
         <span className="minor-primary">常规状态</span>
         <div className="minor-item">
-          <IButton kind="download">下载</IButton>
-          <IButton kind="add" type="dashed">
+          <IButton>
+            <VerticalAlignBottomOutlined />
+            下载
+          </IButton>
+          <IButton type="dashed">
+            <PlusOutlined />
             添加文件
           </IButton>
-          <IButton kind="export">导出</IButton>
+          <IButton>
+            <UploadOutlined />
+            导出
+          </IButton>
           <IButton>增加时间</IButton>
-          <IButton kind="edit" type="link">
+          <IButton type="link">
+            <EditOutlined />
             编辑
           </IButton>
-          <IButton kind="upload" type="link">
+          <IButton type="link">
+            <UploadOutlined />
             上传
           </IButton>
         </div>
@@ -127,16 +145,25 @@ export default () => {
       <div className="minor-row">
         <span className="minor-hover">hover状态</span>
         <div className="minor-item minor-item-hover">
-          <IButton kind="download">下载</IButton>
-          <IButton kind="add" type="dashed">
+          <IButton>
+            <VerticalAlignBottomOutlined />
+            下载
+          </IButton>
+          <IButton type="dashed">
+            <PlusOutlined />
             添加文件
           </IButton>
-          <IButton kind="export">导出</IButton>
+          <IButton>
+            <UploadOutlined />
+            导出
+          </IButton>
           <IButton className="">增加时间</IButton>
-          <IButton kind="edit" type="link">
+          <IButton type="link">
+            <EditOutlined />
             编辑
           </IButton>
-          <IButton kind="upload" type="link">
+          <IButton type="link">
+            <UploadOutlined />
             上传
           </IButton>
         </div>
@@ -144,20 +171,25 @@ export default () => {
       <div className="minor-row">
         <span className="minor-disabled">禁用状态</span>
         <div className="minor-item">
-          <IButton kind="download" disabled>
+          <IButton disabled>
+            <VerticalAlignBottomOutlined />
             下载
           </IButton>
-          <IButton kind="add" type="dashed" disabled>
+          <IButton type="dashed" disabled>
+            <PlusOutlined />
             添加文件
           </IButton>
-          <IButton kind="export" disabled>
+          <IButton disabled>
+            <UploadOutlined />
             导出
           </IButton>
           <IButton disabled>增加时间</IButton>
-          <IButton kind="edit" type="link" disabled>
+          <IButton type="link" disabled>
+            <EditOutlined />
             编辑
           </IButton>
-          <IButton kind="upload" type="link" disabled>
+          <IButton type="link" disabled>
+            <UploadOutlined />
             上传
           </IButton>
         </div>
@@ -171,9 +203,8 @@ export default () => {
 
 ### IButton prop 说明
 
-| 属性      | 说明         | 类型                                      | 默认值 | 是否必传 | 版本 |
-| --------- | ------------ | ----------------------------------------- | ------ | -------- | ---- |
-| className | 按钮的类名   | string                                    |        | 否       |      |
-| children  | 子元素       | React.ReactNode                           |        | 否       |      |
-| kind      | 按钮功能类型 | 'download'/'add'/'export'/'edit'/'upload' |        | 否       |      |
-| sizeValue | 按钮大小     | '1'/'2'/'3'/'4'/'5'/'6'/'7'               | '2'    | 否       |      |
+| 属性      | 说明       | 类型                       | 默认值  | 是否必传 | 版本 |
+| --------- | ---------- | -------------------------- | ------- | -------- | ---- |
+| className | 按钮的类名 | string                     |         | 否       |      |
+| children  | 子元素     | React.ReactNode            |         | 否       |      |
+| size      | 按钮大小   | xl/default/lg/md/sm/xs/xxs | default | 否       |      |

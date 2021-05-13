@@ -4,21 +4,26 @@
 @white: #ffffff;
 @border-radius: 4px;
 @font-color: #5c6f88;
+@font-size: 13px;
+@icon-size: 16px;
+@disabled-opacity: 0.4;
+@button-padding: 0 19px;
+@button-height: 36px;
 
 .ii-button {
   display: flex;
   align-items: center;
-  padding: 0 19px;
-  height: 36px;
-  font-size: 13px;
+  padding: @button-padding;
+  height: @button-height;
+  font-size: @font-size;
   border-radius: @border-radius;
   text-shadow: none;
   box-shadow: none;
   .anticon:not(.anticon-loading),
   .ant-btn-loading-icon {
-    height: 16px;
-    line-height: 16px;
-    font-size: 16px;
+    height: @icon-size;
+    line-height: @icon-size;
+    font-size: @icon-size;
     margin-right: 4px;
   }
   .anticon + span {
@@ -56,10 +61,10 @@
   background-color: @white !important;
 }
 .ant-btn[disabled]:not(.ant-btn-primary) {
-  opacity: 0.4;
+  opacity: @disabled-opacity;
 }
 .ant-btn[disabled]:not(.ant-btn-primary):hover {
-  opacity: 0.4;
+  opacity: @disabled-opacity;
 }
 .ant-btn-link {
   .anticon:not(.anticon-upload) {

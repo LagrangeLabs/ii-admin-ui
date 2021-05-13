@@ -203,8 +203,8 @@ export default () => {
 
 ### IButton prop 说明
 
-| 属性      | 说明       | 类型                       | 默认值  | 是否必传 | 版本 |
-| --------- | ---------- | -------------------------- | ------- | -------- | ---- |
-| className | 按钮的类名 | string                     |         | 否       |      |
-| children  | 子元素     | React.ReactNode            |         | 否       |      |
-| size      | 按钮大小   | xl/default/lg/md/sm/xs/xxs | default | 否       |      |
+| 属性      | 说明       | 类型                                                     | 默认值    | 是否必传 | 版本 |
+| --------- | ---------- | -------------------------------------------------------- | --------- | -------- | ---- |
+| className | 按钮的类名 | string                                                   |           | 否       |      |
+| children  | 子元素     | React.ReactNode                                          |           | 否       |      |
+| size      | 按钮大小   | 'xl' \| 'default' \| 'lg' \| 'md' \| 'sm'\| 'xs'\| 'xss' | 'default' | 否       |      |

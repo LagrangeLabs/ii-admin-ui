@@ -19,39 +19,22 @@ export const IButton: FC<IButtonProps> = props => {
 
   const buttonCls = classNames('ii-button', className);
 
+  const mapSize = new Map();
+  mapSize.set('xl', ['20px', '40px']);
+  mapSize.set('default', ['20px', '36px']);
+  mapSize.set('lg', ['15px', '32px']);
+  mapSize.set('md', ['14px', '30px']);
+  mapSize.set('sm', ['14px', '28px']);
+  mapSize.set('xs', ['9px', '26px']);
+  mapSize.set('xss', ['9px', '24px']);
+
+  const sizeFun = (value: string[]) => {
+    setPaddingValue(value?.[0]);
+    setHeightValue(value?.[1]);
+  };
+
   useEffect(() => {
-    switch (size) {
-      case 'xl':
-        setPaddingValue('20px');
-        setHeightValue('40px');
-        break;
-      case 'default':
-        setPaddingValue('20px');
-        break;
-      case 'lg':
-        setPaddingValue('15px');
-        setHeightValue('32px');
-        break;
-      case 'md':
-        setPaddingValue('14px');
-        setHeightValue('30px');
-        break;
-      case 'sm':
-        setPaddingValue('14px');
-        setHeightValue('28px');
-        break;
-      case 'xs':
-        setPaddingValue('9px');
-        setHeightValue('26px');
-        break;
-      case 'xss':
-        setPaddingValue('9px');
-        setHeightValue('24px');
-        break;
-      default:
-        setPaddingValue('20px');
-        setHeightValue('36px');
-    }
+    sizeFun(mapSize.get(size));
   }, []);
 
   return (

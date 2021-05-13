@@ -38,6 +38,12 @@
   color: @primary-color;
   border-color: @primary-color;
 }
+.ii-button:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link) {
+  .anticon-upload,
+  .anticon-upload + span {
+    color: @primary-color;
+  }
+}
 .ant-btn-primary {
   background: @primary-color;
 }

@@ -3,34 +3,42 @@
 @primary-color-2: rgba(0, 133, 255, 0.2);
 @white: #ffffff;
 @border-radius: 4px;
-@color: #5c6f88;
+@font-color: #5c6f88;
 
 .ii-button {
+  display: flex;
+  align-items: center;
   padding: 0 19px;
   height: 36px;
   font-size: 13px;
   border-radius: @border-radius;
   text-shadow: none;
   box-shadow: none;
-  .ant-btn-primary {
-    background: @primary-color;
+  .anticon:not(.anticon-loading),
+  .ant-btn-loading-icon {
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    margin-right: 4px;
   }
-  .ant-btn-primary:hover {
-    background: @primary-color-8;
+  .anticon + span {
+    margin-left: 0;
   }
 }
-.anticon {
-  font-size: 16px;
-}
-.anticon + span {
-  margin-left: 4px;
+.ii-button:not(.ant-btn-primary):not(.ant-btn-dashed) {
+  color: @font-color;
 }
 .ii-button:focus:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link),
 .ii-button:not(.ant-btn-primary):not([disabled]):hover {
   color: @primary-color;
   border-color: @primary-color;
 }
-
+.ant-btn-primary {
+  background: @primary-color;
+}
+.ant-btn-primary:hover {
+  background: @primary-color-8;
+}
 .ant-btn-primary[disabled] {
   color: @white;
   background: @primary-color-2 !important;
@@ -39,48 +47,39 @@
 .ant-btn-primary[disabled]:hover {
   color: @white;
 }
-
 .ant-btn-dashed {
   color: @primary-color;
   background-color: @white;
 }
 .ant-btn-dashed[disabled] {
+  color: @primary-color !important;
   background-color: @white !important;
 }
-
 .ant-btn[disabled]:not(.ant-btn-primary) {
   opacity: 0.4;
 }
 .ant-btn[disabled]:not(.ant-btn-primary):hover {
   opacity: 0.4;
 }
-
-.ant-btn-link .anticon:not(.anticon-upload) {
-  color: @primary-color !important;
+.ant-btn-link {
+  .anticon:not(.anticon-upload) {
+    color: @primary-color !important;
+  }
 }
-
-.ant-btn-link .anticon-upload,
-.ant-btn-link > .anticon-edit + span,
-.ant-btn-link > .anticon-upload + span {
-  color: @color;
+.ant-btn-link[disabled] {
+  .anticon-edit {
+    color: @primary-color !important;
+  }
 }
-
 .ant-btn-link:focus,
 .ant-btn-link:not([disabled]):hover {
   border-color: transparent !important;
-  .anticon-upload {
-    color: @primary-color !important;
-  }
-  .anticon-edit + span {
-    color: @primary-color !important;
-  }
+  .anticon-upload,
+  .anticon-edit + span,
   .anticon-upload + span {
     color: @primary-color !important;
   }
 }
-.ant-btn-link[disabled] .anticon-edit {
-  color: @primary-color !important;
-}
-.ant-btn-dashed[disabled] {
-  color: @primary-color !important;
+.ant-btn > .ant-btn-loading-icon .anticon {
+  padding: 0;
 }

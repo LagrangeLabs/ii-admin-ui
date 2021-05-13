@@ -1,4 +1,5 @@
 .main-row1 {
+  display: flex;
   margin-bottom: 40px;
 }
 .main-row1>* {
@@ -32,6 +33,9 @@
   align-items: center;
   margin-bottom: 17px;
 }
+.minor-item {
+  display: flex;
+}
 .minor-item >* {
   margin-right: 20px;
 }
@@ -39,18 +43,12 @@
   color: #0085ff;
   border-color: #0085ff;
 }
-.minor-item-hover> .ant-btn-link > .anticon-edit + span {
+.minor-item-hover> .ant-btn-link > .anticon-edit + span,  .minor-item-hover> .ant-btn-link > .anticon-upload + span{
   color: #0085ff;
 }
-.minor-item-hover> .ant-btn-link > .anticon-upload + span {
-  color: #0085ff;
-}
-.minor-primary {
+.minor-primary, .minor-disabled {
   margin-right: 18px;
 }
 .minor-hover {
   margin-right: 10px;
-}
-.minor-disabled {
-  margin-right: 18px;
 }

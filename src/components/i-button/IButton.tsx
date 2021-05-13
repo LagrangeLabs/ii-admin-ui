@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import classNames from 'classnames';
 import { ButtonProps } from 'antd/lib/button';
 
-import './style/index.less';
+import './index.less';
 
 export interface IButtonProps extends Omit<ButtonProps, 'size'> {
   /** 设置按钮的样式名 */

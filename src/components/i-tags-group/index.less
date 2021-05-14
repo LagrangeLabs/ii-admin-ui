@@ -1,20 +1,20 @@
-@import '../../styles/var.less';
+@import '../i-style/index.less';
 
 .ii-tags-group-container {
   .ii-tags-group-plus {
     background: #fff;
-    border: 1px dashed @border-color;
+    border: 1px dashed @ii-border-color;
     border-radius: 5px;
     color: @primary-color;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: @font-size-base;
+    font-weight: @ii-font-weight;
   }
   .ii-tags-group-edit {
-    color: @tag-color;
-    background-color: @tag-bg-color;
+    color: @ii-tag-color;
+    background-color: fade(@ii-tag-color, 10%);
     user-select: none;
     line-height: 22px;
-    font-size: 13px;
+    font-size: @font-size-base;
     border: none;
   }
   .ii-tags-group-input {

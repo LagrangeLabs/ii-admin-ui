@@ -5,12 +5,15 @@ import { TagProps } from 'antd/lib/tag/index';
 
 import './index.less';
 
-type DefaultTags = { closable?: boolean; text?: string } | string;
-type Tags = string;
+export type DefaultTags = { closable?: boolean; text?: string } | string;
 export interface TagGroupsProps extends TagProps {
+  /** 标签组默认值 */
   defaultValues?: DefaultTags[];
+  /** 添加标签文字， 默认值增加关键词 */
   addText?: string;
+  /** 标签长度，超出显示tooltip 默认值20 */
   maxLength?: number;
+  /** 标签组值更新回调 */
   onValuesChange?: (tags: string[]) => void;
 }
 
@@ -61,7 +64,7 @@ function EditableTagGroup(props: TagGroupsProps) {
     onValuesChange && onValuesChange(tags);
   }, [tags]);
 
-  const handleClose = (removedTag: Tags) => {
+  const handleClose = (removedTag: string) => {
     const tagsR = tags.filter(tag => tag !== removedTag);
     setTags(tagsR);
   };

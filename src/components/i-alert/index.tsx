@@ -4,7 +4,7 @@ import createIIcon from '../i-icon';
 import './index.less';
 
 const IIcon = createIIcon('//at.alicdn.com/t/font_2221989_8ljdyf81eqj.js');
-// todo 目前只有success的图标
+// todo 目前只有success和error的图标
 const customIcons = {
   info: '',
   success: <IIcon type="icon-chenggong" />,

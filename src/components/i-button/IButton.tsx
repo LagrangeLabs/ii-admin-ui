@@ -39,7 +39,7 @@ export const IButton: FC<IButtonProps> = props => {
 
   return (
     <Button
-      // data-testid="test-button"
+      data-testid="test-button"
       className={buttonCls}
       style={{ height: `${heightValue}`, padding: `0 ${paddingValue}` }}
       {...restProps}

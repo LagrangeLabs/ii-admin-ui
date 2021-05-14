@@ -12,7 +12,7 @@ const customIcons = {
   error: <IIcon type="icon-shibai" />,
 } as Record<NonNullable<AlertProps['type']>, ReactNode>;
 
-const IAlert: FC<AlertProps> = props => {
+const IAlert: FC<IAlertProps> = props => {
   // props
   const {
     type = 'info',
@@ -20,14 +20,16 @@ const IAlert: FC<AlertProps> = props => {
     icon,
     closable,
     closeText,
-    // ? unstable prefix的变量暂时不支持传入
-    action: unstable_action,
-    banner: unstable_banner,
-    description: unstable_description,
     ...restProps
   } = props;
   // effect
   useEffect(() => {
+    const {
+      // ? unstable prefix的变量暂时不支持传入
+      action: unstable_action,
+      banner: unstable_banner,
+      description: unstable_description,
+    } = props as AlertProps;
     let warnTxt = '';
     const createWarnTxt = (txt: string) => {
       if (!warnTxt) {

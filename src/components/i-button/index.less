@@ -1,17 +1,17 @@
 @import '../i-style/color/index.less';
 @import '../i-style/themes/index.less';
 
+@button-padding: 0 19px;
+@button-height: 36px;
 @primary-color: @ii-info-color;
 @primary-color-8: rgba(0, 133, 255, 0.8);
 @primary-color-2: rgba(0, 133, 255, 0.2);
-@white: #ffffff;
-@border-radius: 4px;
+@default-color: #ffffff;
 @font-color: #5c6f88;
 @font-size: @ii-font-size-base;
 @icon-size: 16px;
+@border-radius: 4px;
 @disabled-opacity: 0.4;
-@button-padding: 0 19px;
-@button-height: 36px;
 
 .ii-button {
   display: flex;
@@ -54,20 +54,20 @@
   background: @primary-color-8;
 }
 .ant-btn-primary[disabled] {
-  color: @white;
+  color: @default-color;
   background: @primary-color-2 !important;
   border-color: transparent !important;
 }
 .ant-btn-primary[disabled]:hover {
-  color: @white;
+  color: @default-color;
 }
 .ant-btn-dashed {
   color: @primary-color;
-  background-color: @white;
+  background-color: @default-color;
 }
 .ant-btn-dashed[disabled] {
   color: @primary-color !important;
-  background-color: @white !important;
+  background-color: @default-color !important;
 }
 .ant-btn[disabled]:not(.ant-btn-primary) {
   opacity: @disabled-opacity;

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useMemo, useState } from 'react';
 import { Button } from 'antd';
 import classNames from 'classnames';
 import { ButtonProps } from 'antd/lib/button';
@@ -14,8 +14,6 @@ export interface IButtonProps extends Omit<ButtonProps, 'size'> {
 
 export const IButton: FC<IButtonProps> = props => {
   const { size, className, children, ...restProps } = props;
-  const [paddingValue, setPaddingValue] = useState<string>('20px');
-  const [heightValue, setHeightValue] = useState<string>('36px');
 
   const buttonCls = classNames('ii-button', className);
 
@@ -28,25 +26,23 @@ export const IButton: FC<IButtonProps> = props => {
   mapSize.set('xs', ['9px', '26px']);
   mapSize.set('xss', ['9px', '24px']);
 
-  const sizeFun = (value: string[]) => {
-    setPaddingValue(value?.[0]);
-    setHeightValue(value?.[1]);
-  };
+  const ButtonComponent = useMemo(() => {
+    return (
+      <Button
+        data-testid="test-button"
+        className={buttonCls}
+        style={{
+          height: mapSize.get(size)?.[1],
+          padding: mapSize.get(size)?.[0],
+        }}
+        {...restProps}
+      >
+        {children}
+      </Button>
+    );
+  }, [mapSize.get(size)]);
 
-  useEffect(() => {
-    size && sizeFun(mapSize.get(size));
-  }, []);
-
-  return (
-    <Button
-      data-testid="test-button"
-      className={buttonCls}
-      style={{ height: `${heightValue}`, padding: `0 ${paddingValue}` }}
-      {...restProps}
-    >
-      {children}
-    </Button>
-  );
+  return <>{ButtonComponent}</>;
 };
 
 export default IButton;

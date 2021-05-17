@@ -4,6 +4,8 @@ export default {
     type: 'babel',
     importLibToEs: true,
   },
+  // esm: 'rollup',
+  // cjs: 'rollup',
   umd: {},
   extraBabelPlugins: [
     [

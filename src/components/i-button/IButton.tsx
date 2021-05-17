@@ -34,7 +34,7 @@ export const IButton: FC<IButtonProps> = props => {
   };
 
   useEffect(() => {
-    sizeFun(mapSize.get(size));
+    size && sizeFun(mapSize.get(size));
   }, []);
 
   return (

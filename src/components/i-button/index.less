@@ -3,12 +3,10 @@
 
 @button-padding: 0 19px;
 @button-height: 36px;
-@primary-color: @ii-info-color;
-@primary-color-8: rgba(0, 133, 255, 0.8);
-@primary-color-2: rgba(0, 133, 255, 0.2);
+@primary-color-2: rgba(@ii-info-color, 0.2);
+@primary-color-8: rgba(@ii-info-color, 0.8);
 @default-color: #ffffff;
 @font-color: #5c6f88;
-@font-size: @ii-font-size-base;
 @icon-size: 16px;
 @border-radius: 4px;
 @disabled-opacity: 0.4;
@@ -18,7 +16,7 @@
   align-items: center;
   padding: @button-padding;
   height: @button-height;
-  font-size: @font-size;
+  font-size: @ii-font-size-base;
   border-radius: @border-radius;
   text-shadow: none;
   box-shadow: none;
@@ -38,17 +36,17 @@
 }
 .ii-button:focus:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link),
 .ii-button:not(.ant-btn-primary):not([disabled]):hover {
-  color: @primary-color;
-  border-color: @primary-color;
+  color: @ii-info-color;
+  border-color: @ii-info-color;
 }
 .ii-button:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link) {
   .anticon-upload,
   .anticon-upload + span {
-    color: @primary-color;
+    color: @ii-info-color;
   }
 }
 .ant-btn-primary {
-  background: @primary-color;
+  background: @ii-info-color;
 }
 .ant-btn-primary:hover {
   background: @primary-color-8;
@@ -62,11 +60,11 @@
   color: @default-color;
 }
 .ant-btn-dashed {
-  color: @primary-color;
+  color: @ii-info-color;
   background-color: @default-color;
 }
 .ant-btn-dashed[disabled] {
-  color: @primary-color !important;
+  color: @ii-info-color !important;
   background-color: @default-color !important;
 }
 .ant-btn[disabled]:not(.ant-btn-primary) {
@@ -77,12 +75,12 @@
 }
 .ant-btn-link {
   .anticon:not(.anticon-upload) {
-    color: @primary-color !important;
+    color: @ii-info-color !important;
   }
 }
 .ant-btn-link[disabled] {
   .anticon-edit {
-    color: @primary-color !important;
+    color: @ii-info-color !important;
   }
 }
 .ant-btn-link:focus,
@@ -91,7 +89,7 @@
   .anticon-upload,
   .anticon-edit + span,
   .anticon-upload + span {
-    color: @primary-color !important;
+    color: @ii-info-color !important;
   }
 }
 .ant-btn > .ant-btn-loading-icon .anticon {

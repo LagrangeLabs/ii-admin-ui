@@ -208,3 +208,5 @@ export default () => {
 | className | 按钮的类名 | string                                                   |           | 否       |      |
 | children  | 子元素     | React.ReactNode                                          |           | 否       |      |
 | size      | 按钮大小   | 'xl' \| 'default' \| 'lg' \| 'md' \| 'sm'\| 'xs'\| 'xss' | 'default' | 否       |      |
+
+IButton 是 antd button 的再封装，继承其属性，其他 API 详见https://ant.design/components/button-cn/#API

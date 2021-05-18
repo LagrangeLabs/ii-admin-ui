@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, FC } from 'react';
 import { Tag, Input, Tooltip } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-import { TagProps } from 'antd/lib/tag/index';
+
+import type { TagProps } from 'antd/lib/tag/index';
 
 import './index.less';
 
@@ -17,7 +18,7 @@ export interface ITagGroupsProps extends TagProps {
   onValuesChange?: (tags: string[]) => void;
 }
 
-const EditableTagGroup: FC<ITagGroupsProps> = props => {
+const EditableTagGroup: FC<ITagGroupsProps> = (props) => {
   const {
     defaultValues = [],
     addText = '增加关键词',
@@ -28,8 +29,8 @@ const EditableTagGroup: FC<ITagGroupsProps> = props => {
     ...restTag
   } = props;
 
-  const [tags, setTags] = useState([] as string[]);
-  const [disabled, setDisbaleIndex] = useState([] as number[]);
+  const [tags, setTags] = useState<string[]>([]);
+  const [disabled, setDisbaleIndex] = useState<number[]>([]);
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [editInputIndex, setEditInputIndex] = useState(-1);
@@ -69,7 +70,7 @@ const EditableTagGroup: FC<ITagGroupsProps> = props => {
   }, [tags]);
 
   const handleClose = (removedTag: string) => {
-    const tagsR = tags.filter(tag => tag !== removedTag);
+    const tagsR = tags.filter((tag) => tag !== removedTag);
     setTags(tagsR);
   };
 
@@ -91,7 +92,9 @@ const EditableTagGroup: FC<ITagGroupsProps> = props => {
     setInputValue('');
   };
 
-  const handleEditInputChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+  const handleEditInputChange: React.ChangeEventHandler<HTMLInputElement> = (
+    e,
+  ) => {
     setEditInputValue(e.target.value);
   };
 
@@ -133,7 +136,7 @@ const EditableTagGroup: FC<ITagGroupsProps> = props => {
             onClose={() => handleClose(tag)}
           >
             <span
-              onDoubleClick={e => {
+              onDoubleClick={(e) => {
                 if (editFlag) {
                   setEditInputIndex(index);
                   setEditInputValue(tag);

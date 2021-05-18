@@ -24,9 +24,7 @@ export default () => {
   return (
     <>
       <div className="main-row1">
-        <IButton type="primary" size="small">
-          提交表单
-        </IButton>
+        <IButton type="primary">提交表单</IButton>
         <IButton type="primary">
           <PlusOutlined />
           添加时间

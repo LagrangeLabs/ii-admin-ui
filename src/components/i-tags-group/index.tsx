@@ -1,14 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  FC,
+  Profiler,
+  useCallback,
+} from 'react';
 import { Tag, Input, Tooltip } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { TagProps } from 'antd/lib/tag/index';
 
 import './index.less';
 
-export type DefaultTags = { closable?: boolean; text?: string } | string;
-export interface TagGroupsProps extends TagProps {
+export type IDefaultTags = { closable?: boolean; text?: string } | string;
+export interface ITagGroupsProps extends TagProps {
   /** 标签组默认值 */
-  defaultValues?: DefaultTags[];
+  defaultValues?: IDefaultTags[];
   /** 添加标签文字， 默认值增加关键词 */
   addText?: string;
   /** 标签长度，超出显示tooltip 默认值20 */
@@ -17,7 +24,7 @@ export interface TagGroupsProps extends TagProps {
   onValuesChange?: (tags: string[]) => void;
 }
 
-function EditableTagGroup(props: TagGroupsProps) {
+const EditableTagGroup: FC<ITagGroupsProps> = props => {
   const {
     defaultValues = [],
     addText = '增加关键词',
@@ -27,18 +34,9 @@ function EditableTagGroup(props: TagGroupsProps) {
     onValuesChange,
     ...restTag
   } = props;
-  const disabledIndex: number[] = [];
 
-  const defaultTags: string[] = [];
-  defaultValues.forEach((item, index) => {
-    const tag = typeof item === 'string' ? item : item.text || '';
-    defaultTags.push(tag);
-    if (typeof item === 'object' && item.closable === false) {
-      disabledIndex.push(index);
-    }
-  });
-  const [tags, setTags] = useState(defaultTags);
-  const [disabled] = useState(disabledIndex);
+  const [tags, setTags] = useState([] as string[]);
+  const [disabled, setDisbaleIndex] = useState([] as number[]);
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [editInputIndex, setEditInputIndex] = useState(-1);
@@ -47,6 +45,21 @@ function EditableTagGroup(props: TagGroupsProps) {
   const inputRef = useRef<Input>(null);
   const editInputRef = useRef<Input>(null);
 
+  // defaultValues 数据初始化
+  useEffect(() => {
+    const disabledIndex: number[] = [];
+    const defaultTags: string[] = [];
+    defaultValues.forEach((item, index) => {
+      const tag = typeof item === 'string' ? item : item.text || '';
+      defaultTags.push(tag);
+      if (typeof item === 'object' && item.closable === false) {
+        disabledIndex.push(index);
+      }
+    });
+    defaultTags.length > 0 && setTags(defaultTags);
+    disabledIndex.length > 0 && setDisbaleIndex(disabledIndex);
+  }, []);
+
   useEffect(() => {
     if (inputVisible) {
       inputRef?.current?.focus();
@@ -54,14 +67,12 @@ function EditableTagGroup(props: TagGroupsProps) {
   }, [inputVisible]);
 
   useEffect(() => {
-    if (editInputIndex !== -1) {
-      editInputRef?.current?.focus();
-    }
+    editInputRef?.current?.focus();
   }, [editInputIndex]);
 
   // 通知调用组件值已经更新
   useEffect(() => {
-    onValuesChange && onValuesChange(tags);
+    onValuesChange?.(tags);
   }, [tags]);
 
   const handleClose = (removedTag: string) => {
@@ -70,7 +81,6 @@ function EditableTagGroup(props: TagGroupsProps) {
   };
 
   const showInput = () => {
-    // this.setState({ inputVisible: true }, () => this.input.focus());
     setInputVisible(true);
   };
 
@@ -134,9 +144,6 @@ function EditableTagGroup(props: TagGroupsProps) {
                 if (editFlag) {
                   setEditInputIndex(index);
                   setEditInputValue(tag);
-                  // setState({ editInputIndex: index, editInputValue: tag }, () => {
-                  //   editInput.focus();
-                  // });
                   e.preventDefault();
                 }
               }}
@@ -153,7 +160,7 @@ function EditableTagGroup(props: TagGroupsProps) {
           tagElem
         );
       })}
-      {inputVisible && (
+      {inputVisible ? (
         <Input
           ref={inputRef}
           type="text"
@@ -164,14 +171,13 @@ function EditableTagGroup(props: TagGroupsProps) {
           onBlur={handleInputConfirm}
           onPressEnter={handleInputConfirm}
         />
-      )}
-      {!inputVisible && (
+      ) : (
         <Tag className="ii-tags-group-plus" onClick={showInput}>
           <PlusOutlined /> {addText}
         </Tag>
       )}
     </div>
   );
-}
+};
 
 export default EditableTagGroup;

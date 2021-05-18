@@ -34,18 +34,18 @@ export default () => {
 
 <!-- <API src='../../src/components/ITagsGroup'> -->
 
-### ITagsGroup prop 说明
+### ITagGroupsProps 说明
 
 继承[TagsProps](https://ant.design/components/tag-cn/#API)
 
 | 属性           | 说明                       | 类型                     | 默认值     | 是否必传 | 版本 |
 | -------------- | -------------------------- | ------------------------ | ---------- | -------- | ---- |
-| defaultValues  | 标签组默认值               | DefaultTags[]            |            | 否       |      |
+| defaultValues  | 标签组默认值               | IDefaultTags[]           |            | 否       |      |
 | addText        | 添加标签文字，             | string                   | 增加关键词 | 否       |      |
 | maxLength      | 标签长度，超出显示 tooltip | number                   | 20         | 否       |      |
 | onValuesChange | 标签组值更新回调           | (tags: string[]) => void |            | 否       |      |
 
-#### DefaultTags
+#### IDefaultTags
 
 string | 对象{ closable?: boolean; text?: string }
 | 属性 | 说明 | 类型 | 默认值 | 是否必传 | 版本 |

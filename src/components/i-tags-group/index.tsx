@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  FC,
-  Profiler,
-  useCallback,
-} from 'react';
+import React, { useState, useRef, useEffect, FC } from 'react';
 import { Tag, Input, Tooltip } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { TagProps } from 'antd/lib/tag/index';

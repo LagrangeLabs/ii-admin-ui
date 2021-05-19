@@ -13,6 +13,7 @@ export default {
         'components/IModal',
         'components/IPopconfirm',
         'components/ITabs',
+        'components/ITagsGroup',
         'components/ITable',
         'components/IAlert',
         'components/ISmallCard',

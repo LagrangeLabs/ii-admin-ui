@@ -1,0 +1,26 @@
+@import '../i-style/color/index.less';
+@import '../i-style/themes/index.less';
+
+.ii-tags-group-container {
+  .ii-tags-group-plus {
+    background: #fff;
+    border: @border-width-base @ii-tag-border-style @border-color-base;
+    border-radius: @ii-tag-border-radius;
+    color: @primary-color;
+    font-size: @font-size-base;
+    font-weight: @ii-font-weight;
+  }
+  .ii-tags-group-edit {
+    color: @ii-tag-color;
+    background-color: fade(@ii-tag-color, 10%);
+    user-select: none;
+    line-height: @ii-tag-line-height;
+    font-size: @font-size-base;
+    border: none;
+  }
+  .ii-tags-group-input {
+    width: @ii-tag-input-width;
+    margin-right: @ii-tag-gutter;
+    vertical-align: top;
+  }
+}

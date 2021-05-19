@@ -67,8 +67,8 @@
   "peerDependencies": {
     "@ant-design/icons": ">=4.2.0",
     "antd": ">=4.7.0",
-    "react": ">=16.8.0",
-    "classnames": ">=2.2.0"
+    "classnames": ">=2.2.0",
+    "react": ">=16.8.0"
   },
   "resolutions": {
     "@types/react": "^16.14.2",
@@ -95,7 +95,7 @@
     "lodash": "^4.17.20",
     "node-fetch": "^2.6.1",
     "open": "^8.0.4",
-    "prettier": "^1.19.1",
+    "prettier": "^2.3.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "simple-git": "^2.37.0",

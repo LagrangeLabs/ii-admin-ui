@@ -6,7 +6,7 @@
   padding: @button-padding;
   height: @button-height;
   font-size: @ii-font-size-base;
-  border-radius: @border-radius;
+  border-radius: @border-radius-4;
   text-shadow: none;
   box-shadow: none;
   .anticon:not(.anticon-loading),
@@ -38,11 +38,11 @@
   background: @ii-info-color;
 }
 .ant-btn-primary:hover {
-  background: @primary-color-8;
+  background: @ii-info-color-8;
 }
 .ant-btn-primary[disabled] {
   color: @default-color;
-  background: @primary-color-2 !important;
+  background: @ii-info-color-2 !important;
   border-color: transparent !important;
 }
 .ant-btn-primary[disabled]:hover {
@@ -56,12 +56,11 @@
   color: @ii-info-color !important;
   background-color: @default-color !important;
 }
-.ant-btn[disabled]:not(.ant-btn-primary) {
-  opacity: @disabled-opacity;
-}
+.ant-btn[disabled]:not(.ant-btn-primary),
 .ant-btn[disabled]:not(.ant-btn-primary):hover {
-  opacity: @disabled-opacity;
+  opacity: @opacity-4;
 }
+
 .ant-btn-link {
   .anticon:not(.anticon-upload) {
     color: @ii-info-color !important;

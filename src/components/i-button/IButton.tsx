@@ -25,22 +25,24 @@ export const IButton: FC<IButtonProps> = (props) => {
   const buttonCls = classNames('ii-button', className);
 
   const mapSize = new Map();
-  mapSize.set('xl', ['20px', '40px']);
-  mapSize.set('default', ['20px', '36px']);
-  mapSize.set('lg', ['15px', '32px']);
-  mapSize.set('md', ['14px', '30px']);
-  mapSize.set('sm', ['14px', '28px']);
-  mapSize.set('xs', ['9px', '26px']);
-  mapSize.set('xss', ['9px', '24px']);
-  mapSize.set('large', ['20px', '40px']);
-  mapSize.set('middle', ['20px', '36px']);
-  mapSize.set('small', ['9px', '22px']);
+  mapSize.set('xl', [20, 40]);
+  mapSize.set('default', [20, 36]);
+  mapSize.set('lg', [15, 32]);
+  mapSize.set('md', [14, 30]);
+  mapSize.set('sm', [14, 28]);
+  mapSize.set('xs', [9, 26]);
+  mapSize.set('xss', [9, 24]);
+  mapSize.set('large', [20, 40]);
+  mapSize.set('middle', [20, 36]);
+  mapSize.set('small', [9, 22]);
 
   const style = useMemo(
     () => ({
-      height: mapSize.get(size)?.[1] || mapSize.get('default')?.[1],
+      height:
+        `${mapSize.get(size)?.[1]}px` || `${mapSize.get('default')?.[1]}px`,
       padding:
-        `0 ${mapSize.get(size)?.[0]}` || `0 ${mapSize.get('default')?.[0]}`,
+        `0 ${mapSize.get(size)?.[0]}px` || `0 ${mapSize.get('default')?.[0]}px`,
+      borderRadius: mapSize.get(size)?.[1] > 30 ? '4px' : '5px',
       ...restProps.style,
     }),
     [size],

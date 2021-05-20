@@ -13,7 +13,7 @@ import React from 'react';
 import { ITagsGroup } from 'ii-admin-ui';
 
 export default () => {
-  const onValuesChange = values => {
+  const onValuesChange = (values) => {
     console.log(values, '########');
   };
 

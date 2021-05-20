@@ -67,8 +67,8 @@
   "peerDependencies": {
     "@ant-design/icons": ">=4.2.0",
     "antd": ">=4.7.0",
-    "react": ">=16.8.0",
-    "classnames": ">=2.2.0"
+    "classnames": ">=2.2.0",
+    "react": ">=16.8.0"
   },
   "resolutions": {
     "@types/react": "^16.14.2",

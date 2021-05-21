@@ -12,5 +12,5 @@ export { default as ITagsGroup } from './components/i-tags-group';
 export { default as IPopconfirm } from './components/i-popconfirm';
 export { default as IAlert } from './components/i-alert';
 export { default as createIIcon } from './components/i-icon';
-export { default as ISmallCard } from './components/i-smallcard';
+export { default as IStatisticsSubCard } from './components/i-statistics-sub-card';
 export { default as IButton } from './components/i-button';

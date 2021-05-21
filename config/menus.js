@@ -16,7 +16,7 @@ export default {
         'components/ITagsGroup',
         'components/ITable',
         'components/IAlert',
-        'components/ISmallCard',
+        'components/IStatisticsSubCard',
         'components/IButton',
       ],
     },

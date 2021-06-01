@@ -36,7 +36,7 @@ function IStatisticsSubCard(props: IStatisticsSubCardProps) {
     tips,
     value = '--',
     valueClass = '',
-    unit = '',
+    unit = '%',
     unitClass = '',
   } = props;
 

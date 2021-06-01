@@ -1,5 +1,4 @@
-@import '../i-style/color/index.less';
-@import '../i-style/themes/index.less';
+@import '../i-style/index.less';
 
 .ii-ui-statisticssubcard {
   padding: 7px 24px 10px;
@@ -12,15 +11,15 @@
     align-items: center;
     justify-content: center;
     &-title {
-      height: 18px;
+      height: @ii-card-title-height;
       margin-bottom: 1px;
-      line-height: 18px;
-      font-size: 13px;
+      line-height: @ii-card-title-height;
+      font-size: @font-size-base;
       color: @text-color-secondary;
       margin-right: 9px;
     }
     &-icon {
-      color: #2f9aff;
+      color: @ii-tip-icon-color;
       font-size: 14px;
     }
   }
@@ -29,16 +28,16 @@
     align-items: center;
     justify-content: center;
     &-value {
-      height: 32px;
-      font-size: 24px;
-      font-weight: 500;
+      height: @ii-card-content-height;
+      font-size: @ii-card-content-font-size;
+      font-weight: @ii-card-content-font-weight;
       color: @text-color;
-      line-height: 32px;
+      line-height: @ii-card-content-height;
       margin-right: 3px;
     }
     &-unit {
       height: 18px;
-      font-size: 13px;
+      font-size: @font-size-base;
       color: @text-color;
       line-height: 28px;
     }

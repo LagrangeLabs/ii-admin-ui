@@ -1,8 +1,8 @@
 ---
-title: ISmallCard组件
+title: IStatisticsSubCard组件
 ---
 
-# ISmallCard 组件
+# IStatisticsSubCard 组件
 
 统计卡片：主要用于展示当前页面的所属纬度的可视化数据信息
 
@@ -10,47 +10,49 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { ISmallCard } from 'ii-admin-ui';
+import { IStatisticsSubCard } from 'ii-admin-ui';
 import { InfoCircleOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 
-import './ISmallCard.css';
+import './IStatisticsSubCard.css';
 
 export default () => {
   return (
-    <div class="smallcard-container">
-      <ISmallCard
+    <div className="statisticssubcard-container">
+      <IStatisticsSubCard
         className="green-bg"
         title="外呼进度"
         tips="这是外呼进度卡片"
-      ></ISmallCard>
-      <ISmallCard
-        className="smallcard-item red-bg"
+      ></IStatisticsSubCard>
+      <IStatisticsSubCard
+        className="statisticssubcard-item red-bg"
         title="外呼进度"
-        titleClass="smallcard-title"
-        icon={<InfoCircleOutlined className="ii-ui-smallcard-header-icon" />}
+        titleClass="statisticssubcard-title"
+        icon={
+          <InfoCircleOutlined className="ii-ui-statisticssubcard-header-icon" />
+        }
+        tips="这是外呼进度卡片"
+        value={0}
+        unit="w"
+      ></IStatisticsSubCard>
+      <IStatisticsSubCard
+        className="statisticssubcard-item red-bg"
+        title="外呼进度"
+        titleClass="statisticssubcard-title"
+        icon={<InfoCircleOutlined className="statisticssubcard-icon" />}
         tips="这是外呼进度卡片"
         value="40"
+        valueClass="statisticssubcard-value"
         unit="w"
-      ></ISmallCard>
-      <ISmallCard
-        className="smallcard-item red-bg"
-        title="外呼进度"
-        titleClass="smallcard-title"
-        icon={<InfoCircleOutlined className="smallcard-icon" />}
-        tips="这是外呼进度卡片"
-        value="40"
-        valueClass="smallcard-value"
-        unit="w"
-        unitClass="smallcard-unit"
-      ></ISmallCard>
+        unitClass="statisticssubcard-unit"
+      ></IStatisticsSubCard>
     </div>
   );
 };
 ```
 
-<!-- <API src='../../src/components/ISmallCard'> -->
+<!-- <API src='../../src/components/IStatisticsSubCard'> -->
 
-### ISmallCard prop 说明
+### IStatisticsSubCard prop 说明
 
 | 属性       | 说明                     | 类型             | 默认值                      | 是否必传 | 版本 |
 | ---------- | ------------------------ | ---------------- | --------------------------- | -------- | ---- |

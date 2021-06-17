@@ -14,3 +14,4 @@ export { default as IAlert } from './components/i-alert';
 export { default as createIIcon } from './components/i-icon';
 export { default as IStatisticsSubCard } from './components/i-statistics-sub-card';
 export { default as IButton } from './components/i-button';
+export { default as IPagination } from './components/i-pagination';

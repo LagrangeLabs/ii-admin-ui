@@ -18,6 +18,7 @@ export default {
         'components/IAlert',
         'components/IStatisticsSubCard',
         'components/IButton',
+        'components/IPagination',
       ],
     },
     // {

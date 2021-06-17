@@ -1,0 +1,177 @@
+@import '../i-style/index.less';
+
+.ii-pagination {
+  display: flex;
+  color: @text-color-secondary;
+  font-size: 13px;
+  .ant-pagination-total-text:not(.ant-pagination.mini
+      .ant-pagination-total-text) {
+    flex: 1;
+  }
+  ::after:not(.ant-pagination.mini) {
+    float: right;
+  }
+  .ant-pagination-item {
+    border-color: @ii-pagination-border-color;
+    border-radius: @border-radius-5;
+    a {
+      color: @text-color;
+    }
+  }
+  .ant-pagination-item-active,
+  .ant-pagination-item:focus,
+  .ant-pagination-item:hover {
+    border-color: @primary-color;
+    a {
+      color: @primary-color;
+    }
+  }
+  .ant-pagination-item-ellipsis {
+    color: @ii-pagination-ellipsis-color !important;
+    &:hover {
+      color: @primary-color !important;
+    }
+  }
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      line-height: normal;
+      color: @text-color-secondary;
+      border-color: @ii-pagination-border-color;
+      border-radius: @border-radius-5;
+    }
+    &:not(.ant-pagination-disabled):hover {
+      .ant-pagination-item-link {
+        color: @primary-color;
+        border-color: @primary-color;
+      }
+    }
+  }
+  .ant-pagination-disabled {
+    .ant-pagination-item-link {
+      color: rgba(@text-color-secondary, 0.2);
+    }
+  }
+  .ant-pagination-options-quick-jumper {
+    margin-left: 30px;
+    input {
+      width: 57px !important;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 13px;
+      border-color: @ii-pagination-border-color;
+      border-radius: @border-radius-4;
+      &:focus {
+        border-color: @primary-color !important;
+      }
+    }
+  }
+}
+
+.ant-pagination.mini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  > * {
+    height: 32px;
+    line-height: 32px;
+  }
+  .ant-pagination-item {
+    border: none;
+  }
+  .ant-pagination-prev,
+  .ant-pagination-item {
+    margin-right: @border-radius-4;
+  }
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      border: none;
+    }
+  }
+  .ant-pagination-item-ellipsis {
+    color: @text-color;
+  }
+}
+
+.ii-pagination-compact {
+  .ant-pagination-item {
+    margin-right: 0;
+    // border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+  .ant-pagination-item-active,
+  .ant-pagination-item:focus {
+    background-color: rgb(@primary-color);
+    a {
+      color: #fff !important;
+    }
+  }
+  .ant-pagination-item:not(.ant-pagination-item-active, .ant-pagination-item:focus):hover {
+    border-color: @ii-pagination-border-color;
+    a {
+      color: @primary-color;
+    }
+  }
+  .ant-pagination-prev {
+    margin-right: 0;
+    .ant-pagination-item-link {
+      border-radius: @border-radius-4 0 0 @border-radius-4 !important;
+      border-right: none;
+    }
+    :hover {
+      border-color: @ii-pagination-border-color !important;
+    }
+  }
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      border-radius: 0 @border-radius-4 @border-radius-4 0 !important;
+      // border-left: none;
+    }
+    :hover {
+      border-color: @ii-pagination-border-color !important;
+    }
+  }
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next {
+    margin: 0;
+    border: 1px solid @ii-pagination-border-color;
+    // border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+}
+
+.ii-pagination-round {
+  .item-same {
+    font-size: 12px;
+    background-color: rgba(@ii-pagination-bg, 0.1);
+    border: none;
+    border-radius: 50%;
+  }
+  .ant-pagination-item {
+    .item-same();
+    line-height: 32px;
+  }
+  .ant-pagination-item-active,
+  .ant-pagination-item:focus {
+    background-color: rgb(@primary-color);
+    a {
+      color: #fff !important;
+    }
+  }
+  .ant-pagination-next,
+  .ant-pagination-prev {
+    .ant-pagination-item-link {
+      .item-same();
+    }
+  }
+  .ant-pagination-item:not(.ant-pagination-item-active, .ant-pagination-item:focus):hover {
+    a {
+      color: @primary-color;
+    }
+  }
+}

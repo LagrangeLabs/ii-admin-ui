@@ -8,13 +8,16 @@ export default {
       title: '展示组件',
       children: [
         'components/ICards',
+        'components/IEmpty',
         'components/ILabel',
         'components/IModal',
         'components/IPopconfirm',
         'components/ITabs',
+        'components/ITagsGroup',
         'components/ITable',
         'components/IAlert',
-        'components/ISmallCard',
+        'components/IStatisticsSubCard',
+        'components/IButton',
       ],
     },
     // {

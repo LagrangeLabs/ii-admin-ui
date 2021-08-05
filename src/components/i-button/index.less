@@ -1,0 +1,85 @@
+@import '../i-style/index.less';
+
+.ii-button {
+  display: flex;
+  align-items: center;
+  padding: @button-padding;
+  height: @button-height;
+  font-size: @ii-font-size-base;
+  border-radius: @border-radius-4;
+  text-shadow: none;
+  box-shadow: none;
+  .anticon:not(.anticon-loading),
+  .ant-btn-loading-icon {
+    height: @icon-size;
+    line-height: @icon-size;
+    font-size: @icon-size;
+    margin-right: 4px;
+  }
+  .anticon + span {
+    margin-left: 0;
+  }
+}
+.ii-button:not(.ant-btn-primary):not(.ant-btn-dashed) {
+  color: @font-color;
+}
+.ii-button:focus:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link),
+.ii-button:not(.ant-btn-primary):not([disabled]):hover {
+  color: @ii-info-color;
+  border-color: @ii-info-color;
+}
+.ii-button:not(.ant-btn-primary):not([disabled]):not(.ant-btn-link) {
+  .anticon-upload,
+  .anticon-upload + span {
+    color: @ii-info-color;
+  }
+}
+.ant-btn-primary {
+  background: @ii-info-color;
+}
+.ant-btn-primary:hover {
+  background: @ii-info-color-8;
+}
+.ant-btn-primary[disabled] {
+  color: @default-color;
+  background: @ii-info-color-2 !important;
+  border-color: transparent !important;
+}
+.ant-btn-primary[disabled]:hover {
+  color: @default-color;
+}
+.ant-btn-dashed {
+  color: @ii-info-color;
+  background-color: @default-color;
+}
+.ant-btn-dashed[disabled] {
+  color: @ii-info-color !important;
+  background-color: @default-color !important;
+}
+.ant-btn[disabled]:not(.ant-btn-primary),
+.ant-btn[disabled]:not(.ant-btn-primary):hover {
+  opacity: @opacity-4;
+}
+
+.ant-btn-link {
+  .anticon:not(.anticon-upload) {
+    color: @ii-info-color !important;
+  }
+}
+.ant-btn-link[disabled] {
+  .anticon-edit {
+    color: @ii-info-color !important;
+  }
+}
+.ant-btn-link:focus,
+.ant-btn-link:not([disabled]):hover {
+  border-color: transparent !important;
+  .anticon-upload,
+  .anticon-edit + span,
+  .anticon-upload + span {
+    color: @ii-info-color !important;
+  }
+}
+.ant-btn > .ant-btn-loading-icon .anticon {
+  padding: 0;
+}
